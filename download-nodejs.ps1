@@ -10,7 +10,7 @@ $downloadURL = "https://nodejs.org/dist/v$nodeVersion/node-v$nodeVersion-win-x64
 
 Write-Output "nodejs-download-url: $downloadURL"
 
-If(test-path "test") {
+If(test-path "temp") {
     Get-ChildItem "temp\*" -Recurse  | Remove-Item
     Get-Item "temp" | Remove-Item
 }
